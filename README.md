@@ -1,2 +1,4 @@
-# terminal_sos
-The game of SOS.
+# SOS
+The game of SOS.  
+
+(ECE-160 Homework 3)
