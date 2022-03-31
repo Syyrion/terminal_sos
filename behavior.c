@@ -47,7 +47,7 @@ static int singlepass(int *score)
                 // Both sgain and ogain are greater than 0
                 // Priorotize choice that results in the most possible SOS setups
                 int schain = search(S_CHAIN_MASK, S_CHAIN_MASK_LENGTH, j, i), ochain = search(O_CHAIN_MASK, O_CHAIN_MASK_LENGTH, j, i);
-                board[i][j] = increment(schain > ochain, &gain, sgain, ogain);
+                board[i][j] = increment(sgain + schain > ogain + ochain, &gain, sgain, ogain);
             }
             else
             {
