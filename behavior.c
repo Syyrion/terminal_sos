@@ -84,14 +84,14 @@ static bool intermediatepass()
                 board[i][j] = (fallbackmode = !fallbackmode) ? 'S' : 'O';
                 return false;
             }
-            // Only one letter can create setups
-            if (schain == 0 || ochain == 0)
-            {
-                board[i][j] = schain > ochain ? 'O': 'S';
-                return false;
-            }
+
             // Both letters create setups
-            // Keep searching
+            if (schain > 0 && ochain > 0)
+                continue;
+            
+            // Only one letter can create setups
+            board[i][j] = schain > ochain ? 'O': 'S';
+            return false;
         }
     }
     return true;
