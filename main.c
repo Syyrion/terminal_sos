@@ -21,7 +21,7 @@ int main()
         char *opponentname;
 
         {
-            printf("\nSelect game mode:\n\ts - Singleplayer\n\tm - Mutiplayer\n\n");
+            printf("\nSelect game mode:\n\ts - Singleplayer (Impossible)\n\tm - Multiplayer\n\n");
             char gamemode;
             do
             {
